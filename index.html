@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Better Me — 92 Days</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🌱</div>
+            <div>
+                <h1>Better Me</h1>
+                <span>92 Day Journey</span>
+            </div>
+        </div>
+
+        <nav class="desktop-nav">
+
+            <button class="nav-item active" data-page="home">
+                <span>⌂</span>
+                <label>Home</label>
+            </button>
+
+            <button class="nav-item" data-page="today">
+                <span>✓</span>
+                <label>Today</label>
+            </button>
+
+            <button class="nav-item" data-page="progress">
+                <span>◔</span>
+                <label>Progress</label>
+            </button>
+
+            <button class="nav-item" data-page="streak">
+                <span>🔥</span>
+                <label>Streak</label>
+            </button>
+
+            <button class="nav-item" data-page="profile">
+                <span>♙</span>
+                <label>Profile</label>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="mini-quote">
+                <span>✨</span>
+                <p>Small steps.<br>Big change.</p>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <p class="top-label">YOUR 2027 VERSION</p>
+                <h2 id="pageTitle">Good evening 👋</h2>
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-button" id="semesterToggle">
+                    🎓
+                </button>
+
+                <div class="avatar">
+                    G
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HOME PAGE ================= -->
+
+        <section class="page active-page" id="homePage">
+
+            <div class="hero-card">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">DAY <span id="heroDay">1</span> OF 92</span>
+
+                    <h1>
+                        Become the version<br>
+                        <em>you've been waiting for.</em>
+                    </h1>
+
+                    <p>
+                        You don't need to become perfect.
+                        You just need to become a little better today.
+                    </p>
+
+                    <button class="primary-btn" data-go="today">
+                        Start Today's Journey →
+                    </button>
+
+                </div>
+
+                <div class="hero-orbit">
+                    <div class="orbit-ring"></div>
+                    <div class="orbit-center">
+                        <strong id="heroProgress">0%</strong>
+                        <span>complete</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Stats -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">🔥</div>
+                    <div>
+                        <span>Current Streak</span>
+                        <strong><span id="currentStreak">0</span> days</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+                    <div>
+                        <span>Days Completed</span>
+                        <strong><span id="daysCompleted">0</span> / 92</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">🎯</div>
+                    <div>
+                        <span>Today's Progress</span>
+                        <strong><span id="todayPercent">0</span>%</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Today's focus -->
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">TODAY'S FOCUS</span>
+                    <h2>Three small wins</h2>
+                </div>
+
+                <button class="text-btn" data-go="today">
+                    View all →
+                </button>
+
+            </div>
+
+
+            <div class="focus-grid">
+
+                <div class="focus-card">
+                    <div class="focus-top">
+                        <span class="focus-emoji">💻</span>
+                        <span class="focus-time">30 MIN</span>
+                    </div>
+                    <h3>Build your career</h3>
+                    <p>Learn coding & placement skills.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-top">
+                        <span class="focus-emoji">🗣️</span>
+                        <span class="focus-time">15 MIN</span>
+                    </div>
+                    <h3>Improve English</h3>
+                    <p>Speak, learn & express yourself.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-top">
+                        <span class="focus-emoji">🧠</span>
+                        <span class="focus-time">20 MIN</span>
+                    </div>
+                    <h3>Take care of yourself</h3>
+                    <p>Move, read or reflect.</p>
+                </div>
+
+            </div>
+
+
+            <!-- Motivation -->
+
+            <div class="quote-card">
+
+                <div class="quote-mark">“</div>
+
+                <div>
+                    <p>
+                        You are not behind. You are building.
+                    </p>
+                    <span>— Your future self</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TODAY PAGE ================= -->
+
+        <section class="page" id="todayPage">
+
+            <div class="page-intro">
+                <span class="section-label">DAY <span id="todayDay">1</span> / 92</span>
+                <h1>Today's Journey</h1>
+                <p>Don't think about all 92 days. Just take care of today.</p>
+            </div>
+
+
+            <!-- Semester Banner -->
+
+            <div class="semester-banner" id="semesterBanner">
+
+                <div class="semester-icon">🎓</div>
+
+                <div>
+                    <strong>Semester Mode</strong>
+                    <p>Your academic work comes first. Keep your personal goals light.</p>
+                </div>
+
+                <button id="disableSemester">Turn off</button>
+
+            </div>
+
+
+            <!-- Daily Progress -->
+
+            <div class="daily-progress-card">
+
+                <div class="progress-heading">
+                    <div>
+                        <span>DAILY PROGRESS</span>
+                        <strong id="dailyProgressText">0 / 6 completed</strong>
+                    </div>
+
+                    <strong id="dailyProgressPercent">0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="dailyProgressFill"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Tasks -->
+
+            <div class="tasks-container">
+
+                <div class="task-category">
+                    <span class="category-icon">💻</span>
+
+                    <div class="category-title">
+                        <h3>Career & Skills</h3>
+                        <p>Build your future</p>
+                    </div>
+                </div>
+
+
+                <div class="task" data-task="java">
+
+                    <div class="task-check">
+                        <button class="check-button"></button>
+                    </div>
+
+                    <div class="task-info">
+                        <h4>Coding Practice</h4>
+                        <p>Practice Java / DSA for 30 minutes</p>
+                    </div>
+
+                    <span class="task-time">30 min</span>
+
+                </div>
+
+
+                <div class="task" data-task="sql">
+
+                    <div class="task-check">
+                        <button class="check-button"></button>
+                    </div>
+
+                    <div class="task-info">
+                        <h4>Technical Skill</h4>
+                        <p>Learn or revise one technical concept</p>
+                    </div>
+
+                    <span class="task-time">20 min</span>
+
+                </div>
+
+
+                <div class="task-category">
+                    <span class="category-icon">🗣️</span>
+
+                    <div class="category-title">
+                        <h3>English & Communication</h3>
+                        <p>Find your voice</p>
+                    </div>
+                </div>
+
+
+                <div class="task" data-task="english">
+
+                    <div class="task-check">
+                        <button class="check-button"></button>
+                    </div>
+
+                    <div class="task-info">
+                        <h4>English Speaking</h4>
+                        <p>Speak in English for 10–15 minutes</p>
+                    </div>
+
+                    <span class="task-time">15 min</span>
+
+                </div>
+
+
+                <div class="task" data-task="words">
+
+                    <div class="task-check">
+                        <button class="check-button"></button>
+                    </div>
+
+                    <div class="task-info">
+                        <h4>Learn 3 Words</h4>
+                        <p>Learn three new / confusing words</p>
+                    </div>
+
+                    <span class="task-time">10 min</span>
+
+                </div>
+
+
+                <div class="task-category">
+                    <span class="category-icon">🧠</span>
+
+                    <div class="category-title">
+                        <h3>Personal Growth</h3>
+                        <p>Take care of yourself</p>
+                    </div>
+
+                </div>
+
+
+                <div class="task" data-task="movement">
+
+                    <div class="task-check">
+                        <button class="check-button"></button>
+                    </div>
+
+                    <div class="task-info">
+                        <h4>Move Your Body</h4>
+                        <p>Walk, stretch or exercise</p>
+                    </div>
+
+                    <span class="task-time">20 min</span>
+
+                </div>
+
+
+                <div class="task" data-task="reflection">
+
+                    <div class="task-check">
+                        <button class="check-button"></button>
+                    </div>
+
+                    <div class="task-info">
+                        <h4>Daily Reflection</h4>
+                        <p>Write one thing you learned today</p>
+                    </div>
+
+                    <span class="task-time">5 min</span>
+
+                </div>
+
+            </div>
+
+
+            <button class="complete-day-btn" id="completeDay">
+                Complete Today's Journey ✨
+            </button>
+
+        </section>
+
+
+        <!-- ================= PROGRESS PAGE ================= -->
+
+        <section class="page" id="progressPage">
+
+            <div class="page-intro">
+                <span class="section-label">YOUR JOURNEY</span>
+                <h1>Progress</h1>
+                <p>Every small step counts.</p>
+            </div>
+
+
+            <div class="big-progress-card">
+
+                <div class="big-progress-circle">
+                    <div>
+                        <strong id="overallProgress">0%</strong>
+                        <span>of journey</span>
+                    </div>
+                </div>
+
+                <div class="big-progress-info">
+                    <span class="section-label">92 DAY JOURNEY</span>
+                    <h2 id="progressHeadline">You're just getting started.</h2>
+                    <p>
+                        Keep showing up. Your future self is being built
+                        one day at a time.
+                    </p>
+
+                    <div class="mini-progress">
+                        <div>
+                            <span>Days completed</span>
+                            <strong><span id="progressDays">0</span> / 92</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div id="overallProgressBar"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="growth-grid">
+
+                <div class="growth-card">
+                    <span>💻</span>
+                    <h3>Career</h3>
+                    <strong id="careerScore">0%</strong>
+                    <div class="small-bar">
+                        <div id="careerBar"></div>
+                    </div>
+                </div>
+
+                <div class="growth-card">
+                    <span>🗣️</span>
+                    <h3>English</h3>
+                    <strong id="englishScore">0%</strong>
+                    <div class="small-bar">
+                        <div id="englishBar"></div>
+                    </div>
+                </div>
+
+                <div class="growth-card">
+                    <span>🧠</span>
+                    <h3>Personal</h3>
+                    <strong id="personalScore">0%</strong>
+                    <div class="small-bar">
+                        <div id="personalBar"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STREAK PAGE ================= -->
+
+        <section class="page" id="streakPage">
+
+            <div class="page-intro">
+                <span class="section-label">CONSISTENCY</span>
+                <h1>Your Streak 🔥</h1>
+                <p>Consistency matters more than perfection.</p>
+            </div>
+
+
+            <div class="streak-hero">
+
+                <div class="fire-circle">
+                    🔥
+                </div>
+
+                <div>
+                    <span>CURRENT STREAK</span>
+                    <strong><span id="bigStreak">0</span> days</strong>
+                    <p>Keep going. You're doing it.</p>
+                </div>
+
+            </div>
+
+
+            <div class="streak-stats">
+
+                <div>
+                    <span>Current</span>
+                    <strong id="streakCurrent">0</strong>
+                </div>
+
+                <div>
+                    <span>Best</span>
+                    <strong id="bestStreak">0</strong>
+                </div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong id="streakCompleted">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="calendar-card">
+
+                <div class="calendar-header">
+
+                    <div>
+                        <span class="section-label">92 DAY CALENDAR</span>
+                        <h2>Your journey so far</h2>
+                    </div>
+
+                </div>
+
+                <div class="calendar-grid" id="calendarGrid"></div>
+
+                <div class="calendar-legend">
+                    <span><i class="empty-dot"></i> Not started</span>
+                    <span><i class="done-dot"></i> Completed</span>
+                    <span><i class="today-dot"></i> Today</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROFILE PAGE ================= -->
+
+        <section class="page" id="profilePage">
+
+            <div class="page-intro">
+                <span class="section-label">ABOUT YOU</span>
+                <h1>Your Profile</h1>
+                <p>This journey is yours.</p>
+            </div>
+
+
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+                    G
+                </div>
+
+                <div class="profile-details">
+                    <span class="section-label">MY 2027 VERSION</span>
+
+                    <h2 id="profileName">Gomathi</h2>
+
+                    <p>
+                        Building a stronger, calmer and more confident version
+                        of myself — one day at a time.
+                    </p>
+
+                    <button class="edit-profile" id="editProfile">
+                        Edit name
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-stats">
+
+                <div>
+                    <span>🌱</span>
+                    <strong id="profileDays">0</strong>
+                    <p>Days completed</p>
+                </div>
+
+                <div>
+                    <span>🔥</span>
+                    <strong id="profileStreak">0</strong>
+                    <p>Current streak</p>
+                </div>
+
+                <div>
+                    <span>✨</span>
+                    <strong id="profileGoals">0</strong>
+                    <p>Goals completed</p>
+                </div>
+
+            </div>
+
+
+            <div class="future-card">
+
+                <div class="future-icon">🌟</div>
+
+                <div>
+                    <span class="section-label">A NOTE TO YOUR FUTURE SELF</span>
+
+                    <h2>
+                        “Don't forget why you started.”
+                    </h2>
+
+                    <p>
+                        The person you become is created by what you repeatedly
+                        do today.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button class="reset-btn" id="resetApp">
+                Reset Journey
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= MOBILE NAV ================= -->
+
+    <nav class="mobile-nav">
+
+        <button class="mobile-nav-item active" data-page="home">
+            <span>⌂</span>
+            <small>Home</small>
+        </button>
+
+        <button class="mobile-nav-item" data-page="today">
+            <span>✓</span>
+            <small>Today</small>
+        </button>
+
+        <button class="mobile-nav-item" data-page="progress">
+            <span>◔</span>
+            <small>Progress</small>
+        </button>
+
+        <button class="mobile-nav-item" data-page="streak">
+            <span>🔥</span>
+            <small>Streak</small>
+        </button>
+
+        <button class="mobile-nav-item" data-page="profile">
+            <span>♙</span>
+            <small>Profile</small>
+        </button>
+
+    </nav>
+
+
+    <!-- ================= SUCCESS POPUP ================= -->
+
+    <div class="toast" id="toast">
+        <span>✨</span>
+        <div>
+            <strong>Day completed!</strong>
+            <p>Another step towards your better self.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
